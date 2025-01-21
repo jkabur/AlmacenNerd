@@ -1,0 +1,83 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacén Nerd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>        
+    <header>
+        <h1>Almacén Nerd</h1>
+    </header>
+
+    <div class="container">
+        <div class="products-grid" id="productsContainer">
+            <div class="product-card">
+                <img src="https://cuadrosdecine.com.ar/wp-content/uploads/2021/08/IMG_20210616_191233_866.jpg" alt="Cuadro Jurassic Park" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Cuadro Jurassic Park</h3>
+                    <p class="product-price">$15000</p>
+                </div>
+                <button class="btn-delete" onclick="deleteProduct(0)" title="Eliminar producto">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://highnessdottv.wordpress.com/wp-content/uploads/2016/04/hstry-x-ghostbusters-7.jpg" alt="Disfraz Cazafantasmas" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Disfraz CazaFantasmas</h3>
+                    <p class="product-price">$50000</p>
+                </div>
+                <button class="btn-delete" onclick="deleteProduct(1)" title="Eliminar producto">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_664587-MLA52559246264_112022-O.webp" alt="Figura de acción Charizard" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Figura de acción Charizard</h3>
+                    <p class="product-price">$250000</p>
+                </div>
+                <button class="btn-delete" onclick="deleteProduct(2)" title="Eliminar producto">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Formulario fijo a la derecha -->
+        <div class="form-container">
+            <h2 class="h2texto">Agregar Productos</h2>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Nombre del producto Geek</label>
+                    <input type="text" id="productName" name="productName" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Precio del producto Geek</label>
+                    <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+                    <div class="error-message" id="priceError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">URL de la imagen del producto Geek</label>
+                    <input type="url" id="productImage" name="productImage" required>
+                    <div class="error-message" id="imageError"></div>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Agregar Producto</button>
+                    <button type="button" class="btn-clear" id="clearForm">Limpiar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Creado por Juan Ignacio Kabur - Enero 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
