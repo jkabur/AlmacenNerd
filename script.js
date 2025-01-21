@@ -76,10 +76,9 @@ function renderProducts() {
     });
 }
 
-// Cambié la función de eliminar, ya no dependemos de 'data-index'
 window.deleteProduct = function(index) {
-    products.splice(index, 1);  // Eliminamos el producto
-    renderProducts();  // Vuelvo a renderizar los productos restantes
+    products.splice(index, 1); 
+    renderProducts(); 
 }
 
 productForm.addEventListener('submit', async (e) => {
@@ -94,7 +93,7 @@ productForm.addEventListener('submit', async (e) => {
         };
         
         products.push(newProduct);
-        renderProducts();  // Renderizamos los productos nuevamente
+        renderProducts(); 
         productForm.reset();
     }
 });
